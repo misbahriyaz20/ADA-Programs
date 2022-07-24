@@ -31,3 +31,11 @@ INSERTION SORT
 
 <img width="770" alt="Screenshot 2022-07-24 181323" src="https://user-images.githubusercontent.com/95582255/180647651-cb03a03f-2fa7-4a40-bb91-521d5e836db0.png">
 
+
+
+BFS DFS
+
+
+<img width="960" alt="Screenshot 2022-07-24 210900" src="https://user-images.githubusercontent.com/95582255/180654907-9e1350a1-a0c9-42c1-bc2a-7718be1d322d.png">
+
+
