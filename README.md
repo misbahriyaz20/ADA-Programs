@@ -24,3 +24,10 @@ SELECTION SORT
 
 
 <img width="770" alt="Screenshot 2022-07-24 174040" src="https://user-images.githubusercontent.com/95582255/180646371-f6874821-079f-41d6-9ade-796756c036ea.png">
+
+
+INSERTION SORT
+
+
+<img width="770" alt="Screenshot 2022-07-24 181323" src="https://user-images.githubusercontent.com/95582255/180647651-cb03a03f-2fa7-4a40-bb91-521d5e836db0.png">
+
