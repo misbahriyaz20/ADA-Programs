@@ -33,6 +33,14 @@ INSERTION SORT
 
 
 
+TOPOLOGICAL SORTING 
+
+
+
+<img width="758" alt="Screenshot 2022-07-24 214942" src="https://user-images.githubusercontent.com/95582255/180656525-a958ea31-30df-47bc-88bf-e77bb84beaf4.png">
+
+
+
 BFS DFS
 
 
