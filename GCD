@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int gcd(int m, int n);
+int main()
+{
+    int a, b;
+    printf("enter two numbers:\n");
+    scanf("%d %d",&a, &b);
+    gcd(a, b);
+    printf("gcd(%d, %d) is %d",a,b,gcd(a,b));
+    return 0;
+}
+
+int gcd(int m, int n)
+{
+    if(m==0)
+    {
+        return n;
+    }
+    else
+    {
+        return gcd(m%n,m);
+    }
+}
+
