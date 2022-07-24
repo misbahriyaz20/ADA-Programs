@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void ins_sort(int arr[], int n)
+{
+    int i, key, j;
+    for(i=1; i<n; i++)
+    {
+        key = i;
+        j=i-1;
+        while(j>=0 && arr[j]>key)
+        {
+            arr[j+1] = arr[j];
+            j = j-1;
+        }
+        arr[j+1] = key;
+    
+    }
+}
+
+void printarr(int arr[], int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+}
+
+
+int main()
+{
+    int i, n;
+    clock_t start_time, end_time;
+    double cpu_time;
+    printf("enter the size of the array:\n");
+    scanf("%d",&n);
+    int arr[n];
+    for(i=0; i<n; i++)
+    {
+        arr[i] = rand()%10;
+    }
+    printarr(arr, n);
+    printf("\n");
+    printf("\nsorted array is:\n");
+    start_time = clock();
+    ins_sort(arr, n);
+    end_time = clock();
+    cpu_time = (double) (end_time-start_time)/CLOCKS_PER_SEC;
+    printarr(arr, n);
+    printf("\ntime taken for execution is:%f",cpu_time);
+    return 0;
+}
