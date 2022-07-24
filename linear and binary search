@@ -1,0 +1,149 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int lin_search(int arr[], int key, int start, int end)
+{
+
+    if(start<=end)
+    {
+        if(arr[start] == key)
+        {
+            return(start);
+        }
+        else 
+        {
+            return(lin_search(arr, key, start+1, end));
+        }
+        
+    }
+    else 
+    return -1;
+    
+}
+
+int bin_search(int arr[], int key, int low, int high)
+{
+    int mid;
+    mid = (low + high)/2;
+    if(low<=high)
+    {
+        if(arr[mid]==key)
+        {
+            return(mid);
+        }
+        else if(arr[mid]>key)
+        {
+            return(bin_search(arr, key, low, mid-1));
+        }
+        
+        else
+        {
+            return(bin_search(arr, key, mid+1, high));
+        }
+    }
+    
+    else 
+    {
+        return -1;
+    }
+}
+
+void sort(int arr[], int n)
+{
+    int i, j, temp;
+    for(j=n-2; j<=i; j--)
+    {
+        for(i=0; i<=j; i++)
+        {
+            if(arr[i]>arr[i+1])
+            {
+                temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+    }
+    
+    
+}
+
+void printarr(int arr[], int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+    {
+        printf("%d\t", arr[i]);
+    }
+}
+
+
+int main()
+{
+    int n, element, position, ch;
+    clock_t start_time, end_time;
+    double cpu_time = 0;
+    printf("enter the number of elements in the array:\n");
+    scanf("%d",&n);
+    int arr[n];
+    int i;
+    for(i=0; i<n; i++)
+    {
+        arr[i]= (rand()%1000);
+    }
+    printf("1.BINARY SEARCH 2.LINEAR SEARCH\n");
+    printf("enter your choice:\n");
+    scanf("%d",&ch);
+    while(ch!=3)
+    {
+        switch(ch)
+        {
+            case 1:
+            printarr(arr,n);
+            sort(arr, n);
+            printarr(arr, n);
+            printf("enter element to be searched:\n");
+            scanf("%d",&element);
+            start_time = clock();
+            position = bin_search(arr, element, 0, n-1);
+            end_time = clock();
+            cpu_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
+            if(position == -1)
+            {
+                printf("element not found\n");
+            }
+            else 
+            {
+                printf("element found at %d and time taken to execute is %f\n",position, cpu_time);
+            }
+            break;
+            
+            case 2:
+            printarr(arr, n);
+            printf("enter element to be searched:\n");
+            scanf("%d",&element);
+            start_time = clock();
+            position = lin_search(arr, element, 0, n-1);
+            end_time = clock();
+            cpu_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
+            if(position == -1)
+            {
+                printf("element not found\n");
+            }
+            else 
+            {
+                printf("element found at %d and time taken to execute is %f\n",position, cpu_time);
+            }
+            break;
+            
+            default:
+            printf("enter a valid choice:\n");
+            break;
+        }
+        printf("enter your choice:\n");
+        scanf("%d",&ch);
+    }
+    return 0;
+}
+
+
