@@ -33,6 +33,14 @@ INSERTION SORT
 
 
 
+MERGE SORT
+
+
+<img width="755" alt="Screenshot 2022-07-27 104533" src="https://user-images.githubusercontent.com/95582255/181166916-0c0568fa-de89-4757-afb2-ff0ca31955bc.png">
+
+
+
+
 QUICK SORT
 
 
