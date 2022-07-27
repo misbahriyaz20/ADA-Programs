@@ -1,0 +1,105 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void swap(int *x, int *y);
+void quicksort(int array[], int length);
+void quicksort_recursion(int array[], int low, int high);
+int partition(int array[], int low, int high);
+
+int main()
+{
+  int length;
+  clock_t start_time, end_time;
+  double cpu_time;
+  printf("enter the length of the array:\n");
+  scanf("%d",&length);
+  int array[length];
+  for(int i=0; i<length; i++)
+  {
+      array[i] = rand()%10;
+  }
+  printf("the array is :\n");
+  for(int i=0; i<length; i++)
+  {
+      printf("%d\t", array[i]);
+  }
+  start_time = clock();
+  quicksort(array, length);
+  end_time = clock();
+  cpu_time = (double)(end_time - start_time / CLOCKS_PER_SEC);
+  printf("\nthe sorted array is :\n");
+  for(int i=0; i<length; i++)
+  {
+      printf("%d\t", array[i]);
+  }
+  printf("\ntime taken for execution of %d size is %.2f",length,cpu_time);
+  
+}
+
+// swaps the value of what x is pointing to with the value of what y is 
+// pointing to, used to perform swaps of array elements in quicksort partition
+void swap(int *x, int *y)
+{
+  int temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+
+void quicksort(int array[], int length)
+{
+  
+  srand(time(NULL));
+  quicksort_recursion(array, 0, length - 1);
+}
+
+
+void quicksort_recursion(int array[], int low, int high)
+{
+  
+  if (low < high)
+  {
+   
+    int pivot_index = partition(array, low, high);
+
+    
+    quicksort_recursion(array, low, pivot_index - 1);
+
+    
+    quicksort_recursion(array, pivot_index + 1, high);
+  }
+}
+
+
+int partition(int array[], int low, int high)
+{
+  
+  int pivot_index = low + (rand() % (high - low));
+  
+  if (pivot_index != high)
+    swap(&array[pivot_index], &array[high]);
+  
+  
+  int pivot_value = array[high];
+  
+  int i = low; 
+  
+  for (int j = low; j < high; j++)
+  {
+    
+    if (array[j] <= pivot_value)
+    {
+      swap(&array[i], &array[j]);
+      i++;
+    }
+  }
+  
+  
+  swap(&array[i], &array[high]);
+  
+  
+  return i;
+}
+
