@@ -32,6 +32,14 @@ INSERTION SORT
 <img width="770" alt="Screenshot 2022-07-24 181323" src="https://user-images.githubusercontent.com/95582255/180647651-cb03a03f-2fa7-4a40-bb91-521d5e836db0.png">
 
 
+JOHNSON TROTTER 
+
+
+
+<img width="748" alt="Screenshot 2022-07-27 121332" src="https://user-images.githubusercontent.com/95582255/181179623-23d61d88-0846-4a33-803d-0923a62f9064.png">
+
+
+
 
 MERGE SORT
 
