@@ -1,0 +1,91 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void mergesort(int arr[], int length);
+void mergesort_rec(int arr[], int l, int r);
+void mergesorted(int arr[], int l, int r, int m);
+
+void mergesort(int arr[], int length)
+{
+    mergesort_rec(arr, 0, length-1);
+}
+
+void mergesort_rec(int arr[], int l, int r)
+{
+    if(l<r)
+    {
+        int m = l + (r-l)/2;
+        mergesort_rec(arr, l, m);
+        mergesort_rec(arr, m+1, r);
+        mergesorted(arr, l, r, m);
+    }
+    
+    
+}
+
+
+void mergesorted(int arr[], int l, int r, int m)
+{
+    int left_length = m-l+1;
+    int right_length = r-m;
+    
+    int temp_left[left_length];
+    int temp_right[right_length];
+    
+    int i, j, k;
+    
+    for(int i=0; i<left_length; i++)
+    {
+        temp_left[i] = arr[l+i];
+    }
+    
+    for(int i=0; i<right_length; i++)
+    {
+        temp_right[i] = arr[m+1+i];
+    }
+    
+    for(i=0, j=0, k=l; k<=r; k++)
+    {
+        if((i<left_length)&&(j>=right_length || temp_left[i]<=temp_right[j]))
+        {
+            arr[k] = temp_left[i];
+            i++;
+        }
+        else 
+        {
+            arr[k] = temp_right[j];
+            j++;
+        }
+    }
+}
+
+int main()
+{
+    int length;
+    clock_t start_time, end_time;
+    double cpu_time;
+    printf("enter the length of the array:\n");
+    scanf("%d", &length);
+    int array[length];
+    for(int i=0; i<length; i++)
+    {
+        array[i] = rand()%10;
+    }
+    printf("the given array is :\n");
+    for(int i=0; i<length; i++)
+    {
+        printf("%d\t", array[i]);
+    }
+    start_time = clock();
+    mergesort(array, length);
+    end_time = clock();
+    cpu_time = (double)(end_time - start_time / CLOCKS_PER_SEC);
+    printf("\nthe sorted array is:\n");
+    for(int i=0; i<length; i++)
+    {
+        printf("%d\t", array[i]);
+    }
+    printf("\ntime taken for sorting of %d size array is %fs", length, cpu_time);
+    return 0;
+}
