@@ -33,6 +33,14 @@ INSERTION SORT
 
 
 
+QUICK SORT
+
+
+<img width="756" alt="Screenshot 2022-07-27 104236" src="https://user-images.githubusercontent.com/95582255/181166576-b9c436f7-c1ad-4e37-8804-fa051851f0fe.png">
+
+
+
+
 TOPOLOGICAL SORTING 
 
 
