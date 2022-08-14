@@ -71,3 +71,11 @@ BFS DFS
 <img width="960" alt="Screenshot 2022-07-24 210900" src="https://user-images.githubusercontent.com/95582255/180654907-9e1350a1-a0c9-42c1-bc2a-7718be1d322d.png">
 
 
+
+Floyds algorithm 
+
+
+<img width="768" alt="Screenshot 2022-08-14 210134" src="https://user-images.githubusercontent.com/95582255/184544194-c5d27d11-1c97-4eb7-9f80-74e04255c0b1.png">
+
+
+
