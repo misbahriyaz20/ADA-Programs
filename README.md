@@ -78,4 +78,11 @@ Floyds algorithm
 <img width="768" alt="Screenshot 2022-08-14 210134" src="https://user-images.githubusercontent.com/95582255/184544194-c5d27d11-1c97-4eb7-9f80-74e04255c0b1.png">
 
 
+Warshalls algorithm
+
+
+<img width="768" alt="Screenshot 2022-08-14 210134" src="https://user-images.githubusercontent.com/95582255/184544595-46d80572-82dd-48f7-9347-2772eaf669c1.png">
+
+
+
 
