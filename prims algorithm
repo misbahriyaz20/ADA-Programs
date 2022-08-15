@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int i, j , n, ne=1, min, mincost, u, v, visited[10], a, b, arr[10][10];
+
+void main()
+{
+    printf("prims algorithm implementation\n");
+    printf("\nenter the number of vertices:\n");
+    scanf("%d", &n);
+    printf("\nenter the cost matrix:\n");
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            scanf("%d", &arr[i][j]);
+            if(arr[i][j]==0)
+            {
+                arr[i][j] = 999;
+            }
+        }
+    }
+    visited[1] =1;
+    printf("\n");
+    while(ne <n)
+    {
+        for(i=1, min=999; i<=n; i++)
+        {
+            for(j=1; j<=n; j++)
+            {
+                if(arr[i][j]<min)
+                {
+                    if(visited[i]!=0)
+                    {
+                        min = arr[i][j];
+                        a=u=i;
+                        b=v=j;
+                    }
+                }
+
+
+            }
+        }
+        if(visited[u]==0 || visited[v]==0)
+                {
+                    printf("%d edge (%d, %d) cost: %d\n", ne++, a, b, min);
+                    visited[b] = 1;
+                    mincost+=min;
+
+                }
+        arr[a][b] = arr[b][a] = 999;
+    }
+    printf("\n cost of minimum spanning tree is %d\n", mincost);
+}
