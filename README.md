@@ -93,4 +93,12 @@ Kruskals algorithm
 
 
 
+Prims algorithm 
+
+
+
+<img width="766" alt="Screenshot 2022-08-15 164626" src="https://user-images.githubusercontent.com/95582255/184633275-311538c4-70c7-4aee-868b-108aa662ac1b.png">
+
+
+
 
