@@ -101,4 +101,13 @@ Prims algorithm
 
 
 
+Djkstras algorithm
+
+
+
+
+<img width="766" alt="Screenshot 2022-08-15 164626" src="https://user-images.githubusercontent.com/95582255/184640353-f581e0bc-d407-4b75-99e0-011eed662e54.png">
+
+
+
 
