@@ -85,4 +85,12 @@ Warshalls algorithm
 
 
 
+Kruskals algorithm
+
+
+
+<img width="766" alt="Screenshot 2022-08-15 164626" src="https://user-images.githubusercontent.com/95582255/184625950-cb6b61f3-71bd-4c89-a5f3-c6da2ef87879.png">
+
+
+
 
