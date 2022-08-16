@@ -110,4 +110,12 @@ Djkstras algorithm
 
 
 
+Knapsack problem 
+
+
+
+<img width="748" alt="Screenshot 2022-08-16 194818" src="https://user-images.githubusercontent.com/95582255/184902957-c0c55e4b-277b-4c22-badd-a032f133ec26.png">
+
+
+
 
