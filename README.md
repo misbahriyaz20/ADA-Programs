@@ -118,4 +118,13 @@ Knapsack problem
 
 
 
+Heapsort problem 
+
+
+
+<img width="761" alt="Screenshot 2022-08-17 143034" src="https://user-images.githubusercontent.com/95582255/185079241-896af0d0-e9d4-4d8b-a431-aeb4c83765fb.png">
+
+
+
+
 
